@@ -1,7 +1,7 @@
 <template>
   <div>
 
-
+<v-btn color="Black" @click='logout'>Log Out</v-btn>
     <v-toolbar flat color="white">
       <v-toolbar-title>DataTable</v-toolbar-title>
       <v-divider
@@ -146,8 +146,9 @@
           })
         },
 
-        signUp(){
-
+        logout(){
+            localStorage.setItem('token' , null)
+              this.$router.push('/')
         },
 
       editItem (item) {
